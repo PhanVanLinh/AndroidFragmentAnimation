@@ -17,6 +17,13 @@ public class Fragment2 extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.fragment_2, null, false);
         Log.i(TAG, "onCreateView");
 
+        rootView.findViewById(R.id.button_go_to_fragment_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) getActivity()).goToFragment(new Fragment3());
+            }
+        });
+
         rootView.findViewById(R.id.button_pop).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
